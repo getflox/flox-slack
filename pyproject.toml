@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "flox-slack"
+version = "0.1.0"
+description = "Manages slack for your project."
+homepage = "https://github.com/getflox/flox-slack"
+authors = ["Michal Przytulski <michal@przytulski.pl>", "Daniel Ancuta <whisller@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+slackclient = "^2.5.0"
+flox-core = {path = "../flox-core"}
+python-slugify = "^4.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.plugins."flox.plugin"]
+slack = "flox_slack:plugin"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
